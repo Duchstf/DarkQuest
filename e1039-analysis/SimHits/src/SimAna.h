@@ -18,6 +18,7 @@ class SQDimuonVector;
 class PHG4TruthInfoContainer;
 class PHG4HitContainer;
 class SRecEvent;
+class Tracklet;
 class SRecTrack;
 class PHG4Hit;
 class PHG4Shower;
@@ -66,6 +67,7 @@ private:
 
     SRecEvent* _recEvent;
     SQTrackVector* _recTrackVector;
+     std::vector<Tracklet*>* _recTrackletVector;
     SQTrackVector* _recSt3TrackletVector;
     SQDimuonVector* _recDimuonVector;
 
@@ -215,6 +217,20 @@ private:
     int track_nhits_st2[100];
     int track_nhits_st3[100];
 
+    int n_tracklets;
+    float tracklet_x_st1[100];
+    float tracklet_y_st1[100];
+    float tracklet_px_st1[100];
+    float tracklet_py_st1[100];
+    float tracklet_pz_st1[100];
+    float tracklet_similarity_st1[100];
+    //station 3
+    float tracklet_x_st3[100];
+    float tracklet_y_st3[100];
+    float tracklet_px_st3[100];
+    float tracklet_py_st3[100];
+    float tracklet_pz_st3[100];
+
     int n_st3tracklets;
     float st3tracklet_x_CAL[100];
     float st3tracklet_y_CAL[100];
@@ -292,6 +308,20 @@ private:
     float dimuon_npos_y[100];
     float dimuon_npos_z[100];
     int dimuon_matched[100];
+
+    float prepos_x_st1[100]; 
+    float prepos_y_st1[100]; 
+    float prepos_z_st1[100]; 
+    float prepos_px_st1[100];
+    float prepos_py_st1[100]; 
+    float prepos_pz_st1[100];
+
+    float preneg_x_st1[100]; 
+    float preneg_y_st1[100]; 
+    float preneg_z_st1[100]; 
+    float preneg_px_st1[100];
+    float preneg_py_st1[100]; 
+    float preneg_pz_st1[100];
   
     int n_showers;
     float sx_ecal[1000];
